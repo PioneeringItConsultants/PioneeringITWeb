@@ -2,7 +2,7 @@
 const MainLayout = () => {
     return (
         <div>
-            Bismiaalah
+            Bismiaalahir Rahmanir Rahim
         </div>
     );
 };
