@@ -1,9 +1,10 @@
-import React from 'react'
 
-export default function Home() {
-  return (
-    <>
-      <h2>Hello World!</h2>
-    </>
-  )
-}
+const MainLayout = () => {
+    return (
+        <div>
+            Bismiaalahir Rahmanir Rahim
+        </div>
+    );
+};
+
+export default MainLayout;
