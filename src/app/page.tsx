@@ -1,10 +1,8 @@
 
-const MainLayout = () => {
-    return (
-        <div>
-            Bismiaalahir Rahmanir Rahim
-        </div>
-    );
-};
-
-export default MainLayout;
+export default function Home() {
+  return (
+    <>
+        <h2>Hello World</h2>
+    </>
+  )
+}
