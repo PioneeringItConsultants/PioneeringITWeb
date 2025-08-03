@@ -40,7 +40,7 @@ export default function Footer() {
                         <FooterTitle text={footerData[0].title}/>
                         {
                             footerData[0].items.map(ele=>
-                                <div key={ele.link}>
+                                <div key={ele.name}>
                                     <FooterLink ele={ele}/>
                                 </div>
                             )
@@ -53,7 +53,7 @@ export default function Footer() {
                             <FooterTitle text={footerData[1].title}/>
                             {
                                 footerData[1].items.map(ele=>
-                                    <div key={ele.link}>
+                                    <div key={ele.name}>
                                         <FooterLink ele={ele}/>
                                     </div>
                                 )
@@ -65,7 +65,7 @@ export default function Footer() {
                         <FooterTitle text={footerData[2].title}/>
                             {
                                 footerData[2].items.map(ele=>
-                                    <div key={ele.link}>
+                                    <div key={ele.name}>
                                         <FooterLink ele={ele}/>
                                     </div>
                                 )
