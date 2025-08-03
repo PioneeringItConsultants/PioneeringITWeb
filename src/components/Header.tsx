@@ -2,18 +2,21 @@ import Image from "next/image";
 import Logo from '../../public/images/header/logo.png'
 import Link from "next/link";
 
-export default function Header() {
+const Header = () => {
     const pages = [
         {
             "name": "Home",
             "link": "/"
-        },{
+        },
+        {
             "name": "About",
             "link": "/about"
-        },{
+        },
+        {
             "name": "Services",
             "link": "/services"
-        },{
+        },
+        {
             "name": "Mobile App",
             "link": "/mobile-app"
         }
@@ -47,3 +50,5 @@ export default function Header() {
     </>
   )
 }
+
+export default Header;
