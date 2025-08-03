@@ -1,4 +1,4 @@
-  "use client";
+"use client";
 import React from "react";
 import Image from "next/image";
 import services from "../../../public/images/servises/our_servises.jpg";
