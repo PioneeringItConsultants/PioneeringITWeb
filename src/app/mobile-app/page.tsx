@@ -1,8 +1,9 @@
-
-export default function MobileApp() {
+const MobileApp = () => {
   return (
-    <>
-      <h2>Mobile APP</h2>
-    </>
-  )
-}
+    <div>
+      
+    </div>
+  );
+};
+
+export default MobileApp;
