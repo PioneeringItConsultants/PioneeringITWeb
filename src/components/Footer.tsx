@@ -1,9 +1,13 @@
 import Link from "next/link"
+import { FaFacebook } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 
 export default function Footer() {
     const footerData = [
         {
-            title: "About NexGen lab",
+            title: "About Pioneering IT Consultants",
             items: [
             { name: "Developing computer software maintain", link: "#" },
             { name: "Software applications, platforms, design,", link: "#" },
@@ -32,11 +36,11 @@ export default function Footer() {
 
   return (
     <>
-        <footer className={`bg-[url('/images/footer/footer_backgoround.jpg')] bg-no-repeat bg-cover text-gray-200 pt-20 pb-12 px-20`}>
+        <footer className={`bg-[url('/images/footer/footer_backgoround.jpg')] bg-no-repeat bg-cover text-gray-200 pt-16 pb-12`}>
             <div className="container">
-                <div className="grid grid-cols-10 gap-8">
+                <div className="grid md:grid-cols-10 gap-6">
                     {/* About Company  */}
-                    <div className="col-span-3">
+                    <div className="col-span-3 space-y-3">
                         <FooterTitle text={footerData[0].title}/>
                         {
                             footerData[0].items.map(ele=>
@@ -48,7 +52,7 @@ export default function Footer() {
                     </div>
 
                     <div className="col-span-2 space-y-3">
-                       <div>
+                       <div className="space-y-1">
                             {/* Products  */}
                             <FooterTitle text={footerData[1].title}/>
                             {
@@ -76,7 +80,7 @@ export default function Footer() {
                      {/* Address  */}
                     <div className="col-span-2">
                         <FooterTitle text="Address"/>
-                        <p>Rupayon Shelford (23th Floor),58/2, Mirpur Road, Shayamoli.Dhaka-1207, Bangladesh</p>
+                        <p className="text-sm">Rupayon Shelford (23th Floor),58/2, Mirpur Road, Shayamoli.Dhaka-1207, Bangladesh</p>
                     </div>
 
                     <div className="col-span-2 space-y-3">
@@ -95,15 +99,15 @@ export default function Footer() {
 
                     <div className="col-span-1">
                         <FooterTitle text="Follow Us"/>
-                        <div className="flex gap-4">
-                            <Link href={'#'}>FB</Link>
-                            <Link href={'#'}>FB</Link>
-                            <Link href={'#'}>FB</Link>
+                        <div className="flex gap-5 text-xl mt-4">
+                            <Link href={'#'}><FaFacebook/></Link>
+                            <Link href={'#'}><FaTwitter/></Link>
+                            <Link href={'#'}><FaLinkedin/></Link>
+                            <Link href={'#'}><IoLogoYoutube/></Link>
                         </div>
                     </div>
-
                 </div>
-                <hr  className="mt-12"/>
+                <hr  className="mt-12 boder-[1px] border-gray-500"/>
             </div>
         </footer>
     </>
@@ -111,7 +115,7 @@ export default function Footer() {
 }
 
 function FooterTitle({text}: {text: string}){
-    return <h2 className="text-lg text-teal-500">{text}</h2>
+    return <h2 className="text-[1.2rem] text-primary">{text}</h2>
 }
 
 function FooterLink({ele}: {ele: {name: string; link: string}}){
