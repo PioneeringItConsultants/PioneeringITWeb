@@ -8,7 +8,7 @@ const Header = () => {
     
   return (
     <>
-      <nav className="shadow py-1 sticky top-0 bg-white/95">
+      <nav className="shadow py-1 sticky top-0 bg-white/95 z-95">
         <div className="container flex justify-between items-center">
             {/* Logo  */}
             <Link href={'/'}>
