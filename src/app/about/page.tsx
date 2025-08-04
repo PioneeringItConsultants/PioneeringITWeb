@@ -78,7 +78,7 @@ const About= () => {
        <section className={`bg-[url('/images/about/about_background.jpg')] bg-no-repeat bottom bg-cover py-12`}>
         <div className="container">
           <h2 className="text-3xl text-center">About NexGen Lab</h2>
-          <div className="bg-blue-500 py-10 px-20 rounded-2xl my-8 text-gray-200 text-lg">
+          <div className="bg-blue-500 py-10 md:px-20 px-5 rounded-2xl my-8 text-gray-200 text-lg">
             <p>Nexgen Lab is at the forefront of technological innovation, specializing in cutting-edge software development and advanced testing services. Our team of experienced engineers excels in designing and developing sophisticated web, desktop, and mobile applications that meet the highest standards of quality and performance.</p>
             <p className="mt-6">Since our establishment, Nexgen Lab has partnered with a variety of organizations, from emerging startups to established industry leaders. We are dedicated to delivering transformative solutions that drive operational excellence and business growth across diverse sectors.</p>
           </div>
@@ -165,13 +165,13 @@ const About= () => {
 
       <section className="pb-20 pt-10">
         <div className="container">
-          <div className="relative h-32 md:h-48">
+          <div className="relative h-36 md:h-48">
           <div className="absolute inset-0 bg-cover bg-center rounded-3xl overflow-hidden" style={{ backgroundImage: "url('/images/about/code-bg-image.png')"}} >
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/70 bg-opacity-60"></div>
           </div>
           <div className="relative z-10 flex items-center justify-center h-full px-4">
-            <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold text-center">
+            <h2 className="text-white text-2xl lg:text-3xl font-semibold text-center">
               Are you ready to share your knowledge with us?
             </h2>
           </div>
