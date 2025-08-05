@@ -28,8 +28,8 @@ export default function Footer() {
         {
             title: "Company",
             items: [
-            { name: "Terms & conditions", link: "#" },
-            { name: "Privacy policy", link: "#" },
+            { name: "Terms & conditions", link: "termsAndConditions" },
+            { name: "Privacy policy", link: "privacyPolicy" },
             ],
         },
     ];
