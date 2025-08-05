@@ -77,14 +77,7 @@ const Page = () => {
     priority
   />
 
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-opacity-40 flex flex-col items-center justify-center text-white text-center px-4 z-10">
-       <p className="text-sm sm:text-base md:text-lg max-w-xl mt-50   ">
-  Your idea is the best. It deserves to be developed by the experts.
-</p>
-
-
-  </div>
+  
 </header>
 
 
@@ -136,65 +129,7 @@ const Page = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-xl sm:text-2xl font-semibold text-center text-blue-700 mb-8">
-            Contact Us
-          </h3>
-          <form className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Full Name
-              </label>
-              <input
-                type="text"
-                className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                placeholder="Your Name"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Email Address*
-              </label>
-              <input
-                type="email"
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                placeholder="you@example.com"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Subject
-              </label>
-              <input
-                type="text"
-                className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                placeholder="Subject"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Your Message*
-              </label>
-              <textarea
-                rows={5}
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                placeholder="Write your message here..."
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+       
     </div>
   );
 };
