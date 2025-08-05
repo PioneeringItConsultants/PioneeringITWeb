@@ -1,8 +1,13 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import services from "../../../public/images/servises/our_servises.jpg";
 import ServicesCard from "@/components/ServicesCard";
+
+export const metadata = {
+  title: "NEX SOFT LAB | Services",
+  description:
+    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+};
 
 
 const projectIdeas = [

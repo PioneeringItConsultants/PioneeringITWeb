@@ -1,5 +1,12 @@
 import Image from "next/image";
 import GoogleMap from '../../../public/images/contact/map.png'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NEX SOFT LAB | Contact Us",
+  description:
+    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+};
 
 const Contact = () => {
   return (

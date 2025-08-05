@@ -1,4 +1,3 @@
- "use client";
 import React from "react";
 import Image from "next/image";
 import app_banner from "../../../public/images/mobileapp/image.png";
@@ -10,7 +9,15 @@ import Data from "../../../public/images/mobileapp/data.png";
 import Content from "../../../public/images/mobileapp/content.png";
 import Quality_Assurance from "../../../public/images/mobileapp/quality assurence.jpg";
 import Delivery from "../../../public/images/mobileapp/delevery.png";  
+import { Metadata } from "next";
  
+export const metadata: Metadata = {
+  title: "NEX SOFT LAB | Mobile App Development",
+  description:
+    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+};
+
+
 const steps = [
   {
     title: "Ideation",

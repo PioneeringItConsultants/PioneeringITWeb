@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
@@ -7,6 +5,13 @@ import Saddam from '../../../public/images/home/saddam.jpg'
 import Yeasir from '../../../public/images/about/yeasir.png'
 import Muntasir from '../../../public/images/about/muntasir.jpg'
 import Rahat from '../../../public/images/about/rahat.jpg'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "NEX SOFT LAB | About Us",
+  description:
+    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+};
 
 const About= () => {
   const temaMembersData = [
