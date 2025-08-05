@@ -4,11 +4,13 @@ import Image from "next/image";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import Saddam from '../../../public/images/home/saddam.jpg'
+import Yeasir from '../../../public/images/about/yeasir.png'
+import Muntasir from '../../../public/images/about/muntasir.jpg'
+import Rahat from '../../../public/images/about/rahat.jpg'
 
 const About= () => {
   const temaMembersData = [
     {
-      id: 1,
       name: 'Md. Saddam Hossain Saykat',
       position: 'CEO',
       image: Saddam,
@@ -16,60 +18,25 @@ const About= () => {
       facebook: '#',
       email: '#',
     },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
+      name: 'Md Yeasir Arafat',
+      position: 'Frontend Developer(intern)',
+      image: Yeasir,
+      linkedin: 'https://www.linkedin.com/in/md-yeasir-arafat-598b84238/',
+      facebook: 'https://www.facebook.com/mdyeasir.ararat',
       email: '#',
     },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
-      email: '#',
+      name: 'Muntasir Ahmed',
+      position: 'Full Stack Developer(intern)',
+      image: Muntasir,
+      linkedin: 'https://www.linkedin.com/in/muntasir-ahmed-fahim',
+      facebook: 'https://www.facebook.com/muntasir.ahmed.341792',
+      email: 'maf107714@gmail.com',
     },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
+      name: 'Rahat Ahmed',
+      position: 'UI & UX Designer(intern)',
+      image: Rahat,
       linkedin: '#',
-      facebook: '#',
-      email: '#',
-    },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
-      email: '#',
-    },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
-      email: '#',
-    },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
-      email: '#',
-    },{
-      id: 1,
-      name: 'Md. Saddam Hossain Saykat',
-      position: 'CEO',
-      image: Saddam,
-      linkedin: '#',
-      facebook: '#',
+      facebook: 'https://www.facebook.com/khrrahatkhondokar',
       email: '#',
     }
   ]
