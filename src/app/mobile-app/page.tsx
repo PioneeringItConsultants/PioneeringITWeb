@@ -8,15 +8,14 @@ import Development from "../../../public/images/mobileapp/devlopment.png";
 import Data from "../../../public/images/mobileapp/data.png";
 import Content from "../../../public/images/mobileapp/content.png";
 import Quality_Assurance from "../../../public/images/mobileapp/quality assurence.jpg";
-import Delivery from "../../../public/images/mobileapp/delevery.png";  
+import Delivery from "../../../public/images/mobileapp/delevery.png";
 import { Metadata } from "next";
- 
+
 export const metadata: Metadata = {
   title: "NEX SOFT LAB | Mobile App Development",
   description:
     "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
 };
-
 
 const steps = [
   {
@@ -71,41 +70,42 @@ const steps = [
 
 const Page = () => {
   return (
-    <div className="bg-gray-50 text-gray-800 font-sas">
+    <div className=" font-sas">
       {/* Header Section */}
-     
- <header className="relative w-full h-[250px] sm:h-[320px] md:h-[400px] overflow-hidden">
-  {/* Background Image */}
-  <Image
-    src={app_banner}
-    alt="Android App Development Banner"
-    fill
-    className="object-cover object-center"
-    priority
-  />
 
-  
-</header>
-
+      <header className="relative w-full h-[250px] sm:h-[320px] md:h-[400px] overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src={app_banner}
+          alt="Android App Development Banner"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </header>
 
       {/* Introduction Section */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
         <h2 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">
           Mobile Application Development
         </h2>
-        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-          Standard mobile application development involves creating apps tailored to specific platforms,
-          such as iOS or Android, using their respective development tools and languages. This process typically
-          includes defining app objectives, designing intuitive and engaging user interfaces, and coding the app
-          using platform-specific technologies like Swift for iOS or Kotlin for Android. Rigorous testing is performed
-          to ensure reliability and performance across different devices and operating systems. Once the app is refined
-          and optimized, it is deployed to app stores, followed by ongoing maintenance and updates to address bugs,
-          introduce new features, and adapt to evolving technologies.
+        <p className="text-sm sm:text-base leading-relaxed">
+          Standard mobile application development involves creating apps
+          tailored to specific platforms, such as iOS or Android, using their
+          respective development tools and languages. This process typically
+          includes defining app objectives, designing intuitive and engaging
+          user interfaces, and coding the app using platform-specific
+          technologies like Swift for iOS or Kotlin for Android. Rigorous
+          testing is performed to ensure reliability and performance across
+          different devices and operating systems. Once the app is refined and
+          optimized, it is deployed to app stores, followed by ongoing
+          maintenance and updates to address bugs, introduce new features, and
+          adapt to evolving technologies.
         </p>
       </section>
 
       {/* Steps Section */}
-      <section className="bg-white py-12 sm:py-16">
+      <section className="py-12 sm:py-16">
         <div className="text-center mb-12 px-4">
           <h3 className="text-2xl sm:text-3xl font-semibold text-blue-700">
             App Development Project Life Cycle
@@ -136,7 +136,6 @@ const Page = () => {
       </section>
 
       {/* Contact Section */}
-       
     </div>
   );
 };

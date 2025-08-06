@@ -21,7 +21,7 @@ const projectIdeas = [
 
 const ServicesPage = () => {
   return (
-    <div className="bg-white text-black px-4 sm:px-6 md:px-10 lg:px-20 py-12 space-y-16 min-h-screen">
+    <div className=" px-4 sm:px-6 md:px-10 lg:px-20 py-12 space-y-16 min-h-screen">
       {/* Banner Image */}
       <div className="w-full max-w-7xl mx-auto">
         <Image

@@ -7,6 +7,7 @@ import { IoMenuSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 import Image from "next/image";
+import Theme from './theme/Theme';
 
 
 const MobileMenu = () => {
@@ -52,6 +53,9 @@ const MobileMenu = () => {
 
                 <div className="p-8">
                     <NavMenuLinks/>
+                </div>
+                <div>
+                    <Theme/>
                 </div>
             </aside>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Theme from "./theme/Theme";
 
 const NavMenuLinks = () => {
     const pages = [
@@ -32,6 +33,7 @@ const NavMenuLinks = () => {
                 <Link href={'/contact'}>
                   <button className="px-5 py-2 rounded bg-sky-300 cursor-pointer">Contact</button>
                 </Link>
+                <Theme/>
             </ul>
     );
 };
