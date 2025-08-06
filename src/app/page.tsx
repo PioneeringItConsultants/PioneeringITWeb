@@ -1,8 +1,8 @@
-import ProfileCard from "@/components/ProfileCard";
-import ServicesCard from "@/components/ServicesCard";
+import ProfileCard from "@/components/main/ProfileCard";
+import ServicesCard from "@/components/main/ServicesCard";
 import Link from "next/link";
 import Saddam from '../../public/images/home/saddam.jpg'
-import SectionTitle from "@/components/SectionTitle";
+import SectionTitle from "@/components/main/SectionTitle";
 
 const profileData = [
     {

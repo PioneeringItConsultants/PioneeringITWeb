@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from '../../public/images/header/logo.png';
+import Logo from '../../../public/images/header/logo.png';
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import NavMenuLinks from "./NavMenuLinks";

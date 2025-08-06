@@ -2,7 +2,7 @@
 "use client";
 
 import { useSelector } from "react-redux";
-import Header from "../Header";
+import Header from "./Header";
 
 const ClientHeaderWrapper = () => {
   const theme = useSelector((state: any) => state.theme.theme);

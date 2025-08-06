@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from '../../public/images/header/logo.png'
+import Logo from '../../../public/images/header/logo.png'
 import { useEffect, useState } from "react";
 import NavMenuLinks from "./NavMenuLinks";
 import { IoMenuSharp } from "react-icons/io5";

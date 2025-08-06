@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import services from "../../../public/images/servises/our_servises.jpg";
-import ServicesCard from "@/components/ServicesCard";
+import ServicesCard from "@/components/main/ServicesCard";
 
 export const metadata = {
   title: "NEX SOFT LAB | Services",
