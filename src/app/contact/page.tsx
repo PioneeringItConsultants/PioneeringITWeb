@@ -16,7 +16,6 @@ const Contact = () => {
         <div className="bg-black/10 py-20">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Contact Form */}
               <form className="space-y-4">
                 <input
                   type="text"
