@@ -77,21 +77,11 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      
+    
       {/* Map Section */}
       <div className="my-12 flex justify-center">
-        <Image
-          height={200}
-          width={200}
-          src={GoogleMap}
-          alt="Map"
-          className="w-full max-w-xl rounded-lg shadow-md"
-        />
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d116860.80329355567!2d90.36542959999998!3d23.750941500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1754327943098!5m2!1sen!2sbd" className="w-full md:w-[80vw] h-[400px] md:h-[600px]" loading="lazy"></iframe>
       </div>
-
-
-
-
 
        <section className="pb-20 pt-10">
         <div className="container">
