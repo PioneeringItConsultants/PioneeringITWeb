@@ -26,7 +26,7 @@ const Theme = () => {
       aria-label="Toggle theme"
       className="grid place-items-center w-9 h-9 rounded-full border border-[var(--color-border)] text-[var(--color-ink)] hover:border-[var(--color-brand)] hover:text-[var(--color-accent)] transition-colors"
     >
-      {isLight ? <FiMoon size={18} /> : <FiSun size={18} />}
+      {isLight ? <FiMoon className="text-black hover:text-[var(--color-accent)]" size={18} /> : <FiSun size={18} />}
     </button>
   );
 };
