@@ -1,13 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
-import { HiOutlineMail } from "react-icons/hi";
 import { HiArrowRight } from "react-icons/hi";
 import Saddam from "../../../public/images/home/saddam.jpg";
+import mehedi from "../../../public/images/about/mehedi.jpeg";
 import Yeasir from "../../../public/images/about/yeasir.png";
 import Muntasir from "../../../public/images/about/muntasir.jpg";
 import Rahat from "../../../public/images/about/rahat.jpg";
 import SectionTitle from "@/components/main/SectionTitle";
+import TeamGrid, { TeamMember } from "@/components/main/TeamGrid";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,35 +15,90 @@ export const metadata: Metadata = {
     "NexGen Lab is a software studio crafting high-performance web, desktop and mobile applications with a relentless focus on quality.",
 };
 
-const teamMembers = [
+const DEGREE = "BSc in Computer Science & Engineering (CSE)";
+
+const teamMembers: TeamMember[] = [
   {
     name: "Md. Saddam Hossain Saykat",
     position: "Founder & CEO",
     image: Saddam,
+    degree: DEGREE,
+    summary:
+      "Founder of NexGen Lab, specializing in Node.js backend architecture and DevOps. Designs scalable systems and owns the deployment, CI/CD and cloud infrastructure that keep our products fast and reliable.",
+    expertise: [
+      "Node.js Backend Architecture",
+      "DevOps, CI/CD & Cloud Infrastructure",
+      "Microservices & API Design",
+      "System Scalability & Performance",
+    ],
     linkedin: "#",
     facebook: "#",
     email: "#",
   },
   {
-    name: "Md Yeasir Arafat",
-    position: "Frontend Developer (Intern)",
-    image: Yeasir,
-    linkedin: "https://www.linkedin.com/in/md-yeasir-arafat-598b84238/",
-    facebook: "https://www.facebook.com/mdyeasir.ararat",
+    name: "Md. Mehedi Hasan",
+    position: "Mobile App Developer",
+    image: mehedi,
+    degree: DEGREE,
+    summary:
+      "Mobile application developer building smooth, native-quality apps for Android and iOS. Turns product ideas into polished, performant mobile experiences.",
+    expertise: [
+      "Cross-platform App Development",
+      "Android & iOS",
+      "Flutter & Dart",
+      "App Store Deployment",
+    ],
+    linkedin: "#",
+    facebook: "#",
     email: "#",
   },
   {
     name: "Muntasir Ahmed",
-    position: "Full Stack Developer (Intern)",
+    position: "Full Stack Developer",
     image: Muntasir,
+    degree: DEGREE,
+    summary:
+      "Full stack developer comfortable across the entire stack — building both pixel-perfect frontends and robust backends, and connecting them into complete products.",
+    expertise: [
+      "Frontend Development (React / Next.js)",
+      "Backend Development & APIs",
+      "Database Design",
+      "End-to-end Feature Delivery",
+    ],
     linkedin: "https://www.linkedin.com/in/muntasir-ahmed-fahim",
     facebook: "https://www.facebook.com/muntasir.ahmed.341792",
     email: "maf107714@gmail.com",
   },
   {
+    name: "Md Yeasir Arafat",
+    position: "Laravel Developer",
+    image: Yeasir,
+    degree: DEGREE,
+    summary:
+      "Backend developer specializing in the Laravel ecosystem — building secure, maintainable web applications, REST APIs and admin systems with PHP.",
+    expertise: [
+      "Laravel & PHP",
+      "REST API Development",
+      "Authentication & Security",
+      "MySQL / Database Management",
+    ],
+    linkedin: "https://www.linkedin.com/in/md-yeasir-arafat-598b84238/",
+    facebook: "https://www.facebook.com/mdyeasir.ararat",
+    email: "#",
+  },
+  {
     name: "Rahat Ahmed",
-    position: "UI & UX Designer (Intern)",
+    position: "UI & UX Designer",
     image: Rahat,
+    degree: DEGREE,
+    summary:
+      "UI/UX designer crafting clean, intuitive and beautiful interfaces. Focuses on user research, wireframing and design systems that make products a joy to use.",
+    expertise: [
+      "UI Design & Visual Systems",
+      "UX Research & Wireframing",
+      "Prototyping (Figma)",
+      "Design Systems",
+    ],
     linkedin: "#",
     facebook: "https://www.facebook.com/khrrahatkhondokar",
     email: "#",
@@ -114,45 +168,7 @@ const About = () => {
             text="Talented people turning ideas into reality"
             subtitle="A dedicated team that collaborates with enthusiasm on every project."
           />
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {teamMembers.map((person, i) => (
-              <div key={i} className="glass card-lift rounded-2xl py-8 px-4 text-center">
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  width={112}
-                  height={112}
-                  className="w-28 h-28 rounded-full object-cover mx-auto mb-4 p-[3px] bg-primary"
-                />
-                <h2 className="font-semibold">{person.name}</h2>
-                <p className="text-sm text-[var(--color-muted)] mt-1">
-                  {person.position}
-                </p>
-                <div className="flex justify-center gap-3 mt-5">
-                  <a
-                    target="_blank"
-                    href={person.linkedin}
-                    className="grid place-items-center w-9 h-9 rounded-full border border-[var(--color-border)] hover:border-[var(--color-brand)] hover:text-[var(--color-accent)] transition"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-                  <a
-                    target="_blank"
-                    href={person.facebook}
-                    className="grid place-items-center w-9 h-9 rounded-full border border-[var(--color-border)] hover:border-[var(--color-brand)] hover:text-[var(--color-accent)] transition"
-                  >
-                    <FaFacebookF />
-                  </a>
-                  <a
-                    href={person.email}
-                    className="grid place-items-center w-9 h-9 rounded-full border border-[var(--color-border)] hover:border-[var(--color-brand)] hover:text-[var(--color-accent)] transition"
-                  >
-                    <HiOutlineMail />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamGrid members={teamMembers} />
         </div>
       </section>
 

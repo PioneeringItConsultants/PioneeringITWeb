@@ -6,26 +6,74 @@ import SectionTitle from "@/components/main/SectionTitle";
 import { products } from "@/data/products";
 import Saddam from "../../public/images/home/saddam.jpg";
 import { HiArrowRight } from "react-icons/hi";
-import { FiStar } from "react-icons/fi";
+import {
+  FiStar,
+  FiBox,
+  FiLayers,
+  FiServer,
+  FiHardDrive,
+  FiTrendingUp,
+  FiCreditCard,
+} from "react-icons/fi";
+import { FaAws } from "react-icons/fa6";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiJavascript,
+  SiNodedotjs,
+  SiLaravel,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMongodb,
+  SiGo,
+  SiWordpress,
+  SiRedux,
+  SiFramer,
+  SiFigma,
+  SiFlutter,
+  SiNestjs,
+  SiExpress,
+  SiFastify,
+  SiGraphql,
+} from "react-icons/si";
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "30+", label: "Happy Clients" },
-  { value: "6+", label: "Products Sold" },
+  { value: "25+", label: "Projects Delivered" },
+  { value: "11+", label: "Happy Clients" },
+  { value: "20+", label: "Products Sold" },
   { value: "99%", label: "Satisfaction" },
 ];
 
+const ACCENT = "var(--color-accent)";
+
 const techStack = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Node.js",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "MongoDB",
-  "Redux",
-  "Figma",
-  "AWS",
+  { name: "Next.js", Icon: SiNextdotjs, color: "var(--color-ink)" },
+  { name: "React", Icon: SiReact, color: "#61DAFB" },
+  { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+  { name: "JavaScript", Icon: SiJavascript, color: "#F7DF1E" },
+  { name: "Node.js", Icon: SiNodedotjs, color: "#5FA04E" },
+  { name: "Laravel", Icon: SiLaravel, color: "#FF2D20" },
+  { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+  { name: "MongoDB", Icon: SiMongodb, color: "#47A248" },
+  { name: "GoLang", Icon: SiGo, color: "#00ADD8" },
+  { name: "Wordpress", Icon: SiWordpress, color: "#21759B" },
+  { name: "Redux", Icon: SiRedux, color: "#764ABC" },
+  { name: "Zustand", Icon: FiBox, color: ACCENT },
+  { name: "Framer Motion", Icon: SiFramer, color: "#0055FF" },
+  { name: "Figma", Icon: SiFigma, color: "#F24E1E" },
+  { name: "AWS", Icon: FaAws, color: "#FF9900" },
+  { name: "Flutter", Icon: SiFlutter, color: "#02569B" },
+  { name: "Nest.js", Icon: SiNestjs, color: "#E0234E" },
+  { name: "Express", Icon: SiExpress, color: "var(--color-ink)" },
+  { name: "CMS", Icon: FiLayers, color: ACCENT },
+  { name: "Virtual Private Server", Icon: FiServer, color: ACCENT },
+  { name: "Bucket Manage", Icon: FiHardDrive, color: ACCENT },
+  { name: "SEO", Icon: FiTrendingUp, color: ACCENT },
+  { name: "Payment Method", Icon: FiCreditCard, color: ACCENT },
+  { name: "Fastify", Icon: SiFastify, color: "var(--color-ink)" },
+  { name: "GraphQL", Icon: SiGraphql, color: "#E10098" },
 ];
 
 const profileData = [
@@ -36,20 +84,7 @@ const profileData = [
     links: { linkedin: "#", github: "#", email: "#" },
     image: Saddam,
   },
-  {
-    name: "Md. Saddam Hossain Saykat",
-    title: "Lead Engineer",
-    organization: "NexGen Lab",
-    links: { linkedin: "#", github: "#", email: "#" },
-    image: Saddam,
-  },
-  {
-    name: "Md. Saddam Hossain Saykat",
-    title: "Product Designer",
-    organization: "NexGen Lab",
-    links: { linkedin: "#", github: "#", email: "#" },
-    image: Saddam,
-  },
+
 ];
 
 const Home = () => {
@@ -63,12 +98,12 @@ const Home = () => {
 
         <div className="container relative z-10 py-24 md:py-32 text-center fade-up">
           <span className="eyebrow justify-center mb-6">
-            <FiStar /> Web Development &amp; Digital Products
+            <FiStar /> Software Development &amp; Digital Products
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05]">
-            We build the web,
+          <h1 className="text-4xl md:text-6xl lg:text-6xl font-extrabold tracking-tight leading-[1.05]">
+            We build the AI Powered web and app
             <br />
-            <span className="gradient-text">you grow your business.</span>
+            <span className="gradient-text">to grow your business.</span>
           </h1>
           <p className="text-[var(--color-muted)] text-lg max-w-2xl mx-auto mt-6">
             NexGen Lab designs and develops high-performance websites, web apps
@@ -97,17 +132,22 @@ const Home = () => {
           </div>
         </div>
 
+        {/* <Icon className="text-[var(--color-accent)] text-lg" /> */}
         {/* Tech marquee */}
         <div className="relative z-10 border-y border-[var(--color-border)] py-5 overflow-hidden">
           <div className="marquee-track gap-12">
-            {[...techStack, ...techStack].map((t, i) => (
-              <span
-                key={i}
-                className="text-lg font-semibold text-[var(--color-muted)] whitespace-nowrap"
-              >
-                {t}
-              </span>
-            ))}
+            {[...techStack, ...techStack].map((t, i) => {
+              const Icon = t.Icon;
+              return (
+                <span
+                  key={i}
+                  className="flex items-center gap-2 text-base font-semibold text-[var(--color-ink)] glass px-5 py-2 rounded-full whitespace-nowrap"
+                >
+                  <Icon className="text-lg" style={{ color: t.color }} />
+                  {t.name}
+                </span>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -182,11 +222,11 @@ const Home = () => {
             text="Grow your business with us"
             subtitle="A small, senior team obsessed with quality and your results."
           />
-          <div className="grid md:grid-cols-3 gap-10 md:gap-6">
+          {/* <div className="grid md:grid-cols-3 gap-10 md:gap-6">
             {profileData.map((ele, i) => (
               <ProfileCard key={i} ele={ele} />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </>
