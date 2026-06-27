@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import app_banner from "../../../public/images/mobileapp/image.png";
 import ideation from "../../../public/images/mobileapp/ideation.png";
 import Wireframe from "../../../public/images/mobileapp/wirefearm.png";
@@ -9,134 +9,98 @@ import Data from "../../../public/images/mobileapp/data.png";
 import Content from "../../../public/images/mobileapp/content.png";
 import Quality_Assurance from "../../../public/images/mobileapp/quality assurence.jpg";
 import Delivery from "../../../public/images/mobileapp/delevery.png";
+import SectionTitle from "@/components/main/SectionTitle";
+import { HiArrowRight } from "react-icons/hi";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NEX SOFT LAB | Mobile App Development",
+  title: "NexGen Lab | Mobile App Development",
   description:
-    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+    "Native-quality iOS and Android apps — from ideation to delivery. We design, build and ship mobile experiences your users will love.",
 };
 
 const steps = [
-  {
-    title: "Ideation",
-    description:
-      "This phase gathers technical and business requirements, defines the target audience, and sets project goals.",
-    icon: ideation,
-  },
-  {
-    title: "Wireframe",
-    description:
-      "Create wireframes to structure the app layout and define how users will interact with each screen.",
-    icon: Wireframe,
-  },
-  {
-    title: "Prototype",
-    description:
-      "Build interactive mockups to visualize functionality and gather early feedback before development begins.",
-    icon: Prototype,
-  },
-  {
-    title: "Development",
-    description:
-      "Code the app using platform-specific tools like Android Studio, implementing backend and frontend features.",
-    icon: Development,
-  },
-  {
-    title: "Data",
-    description:
-      "Handle storage solutions, APIs, and backend infrastructure to support app features and user interactions.",
-    icon: Data,
-  },
-  {
-    title: "Content",
-    description:
-      "Design engaging content and visuals, ensuring an intuitive experience and brand consistency.",
-    icon: Content,
-  },
-  {
-    title: "Quality Assurance",
-    description:
-      "Perform rigorous testing to fix bugs, ensure compatibility, and verify smooth operation across devices.",
-    icon: Quality_Assurance,
-  },
-  {
-    title: "Delivery",
-    description:
-      "Deploy the finished app to app stores, set up updates and provide post-launch support.",
-    icon: Delivery,
-  },
+  { title: "Ideation", description: "Gather technical and business requirements, define the audience and set project goals.", icon: ideation },
+  { title: "Wireframe", description: "Structure the app layout and define how users interact with each screen.", icon: Wireframe },
+  { title: "Prototype", description: "Interactive mockups to visualize functionality and gather early feedback.", icon: Prototype },
+  { title: "Development", description: "Build the app with platform-specific tools, implementing backend and frontend.", icon: Development },
+  { title: "Data", description: "Handle storage, APIs and backend infrastructure to power app features.", icon: Data },
+  { title: "Content", description: "Engaging content and visuals for an intuitive, on-brand experience.", icon: Content },
+  { title: "Quality Assurance", description: "Rigorous testing to fix bugs and verify smooth operation across devices.", icon: Quality_Assurance },
+  { title: "Delivery", description: "Deploy to app stores, set up updates and provide post-launch support.", icon: Delivery },
 ];
 
 const Page = () => {
   return (
-    <div className=" font-sas">
-      {/* Header Section */}
-
-      <header className="relative w-full h-[250px] sm:h-[320px] md:h-[400px] overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src={app_banner}
-          alt="Android App Development Banner"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </header>
-
-      {/* Introduction Section */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
-        <h2 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">
-          Mobile Application Development
-        </h2>
-        <p className="text-sm sm:text-base leading-relaxed">
-          Standard mobile application development involves creating apps
-          tailored to specific platforms, such as iOS or Android, using their
-          respective development tools and languages. This process typically
-          includes defining app objectives, designing intuitive and engaging
-          user interfaces, and coding the app using platform-specific
-          technologies like Swift for iOS or Kotlin for Android. Rigorous
-          testing is performed to ensure reliability and performance across
-          different devices and operating systems. Once the app is refined and
-          optimized, it is deployed to app stores, followed by ongoing
-          maintenance and updates to address bugs, introduce new features, and
-          adapt to evolving technologies.
-        </p>
-      </section>
-
-      {/* Steps Section */}
-      <section className="py-12 sm:py-16">
-        <div className="text-center mb-12 px-4">
-          <h3 className="text-2xl sm:text-3xl font-semibold text-blue-700">
-            App Development Project Life Cycle
-          </h3>
-        </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="bg-blue-50 border border-blue-100 p-6 rounded-2xl text-center shadow hover:shadow-md transition"
-            >
-              <Image
-                src={step.icon}
-                alt={step.title}
-                width={64}
-                height={64}
-                className="mx-auto mb-4"
-              />
-              <h4 className="text-lg sm:text-xl font-semibold mb-2 text-blue-800">
-                {step.title}
-              </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden grid-bg">
+        <div className="glow w-[400px] h-[400px] bg-violet-600 -top-20 left-0" />
+        <div className="glow w-[320px] h-[320px] bg-cyan-500 top-10 right-0" />
+        <div className="container relative z-10 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center fade-up">
+          <div>
+            <span className="eyebrow mb-5">Mobile App Development</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              Native-quality apps for{" "}
+              <span className="gradient-text">iOS & Android</span>
+            </h1>
+            <p className="text-[var(--color-muted)] text-lg mt-5 leading-relaxed">
+              We craft mobile apps tailored to each platform — defining
+              objectives, designing intuitive interfaces and coding with
+              platform-specific technologies like Swift and Kotlin. Rigorous
+              testing ensures reliability across every device.
+            </p>
+            <Link href="/contact" className="btn-primary mt-8">
+              Build Your App <HiArrowRight />
+            </Link>
+          </div>
+          <div className="relative">
+            <Image
+              src={app_banner}
+              alt="Mobile App Development"
+              className="w-full rounded-3xl object-cover float"
+              priority
+            />
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-    </div>
+      {/* Process */}
+      <section className="py-20">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Our Process"
+            text="App development life cycle"
+            subtitle="A proven, transparent process from first idea to final delivery."
+          />
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {steps.map((step, index) => (
+              <div
+                key={index}
+                className="glass card-lift rounded-2xl p-6 text-center"
+              >
+                <div className="relative w-16 h-16 mx-auto mb-4">
+                  <span className="absolute -top-2 -right-1 text-xs font-bold w-6 h-6 grid place-items-center rounded-full bg-primary text-white">
+                    {index + 1}
+                  </span>
+                  <Image
+                    src={step.icon}
+                    alt={step.title}
+                    width={64}
+                    height={64}
+                    className="mx-auto"
+                  />
+                </div>
+                <h4 className="text-lg font-semibold mb-2">{step.title}</h4>
+                <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

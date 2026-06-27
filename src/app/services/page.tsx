@@ -1,73 +1,88 @@
-import React from "react";
-import Image from "next/image";
-import services from "../../../public/images/servises/our_servises.jpg";
 import ServicesCard from "@/components/main/ServicesCard";
+import SectionTitle from "@/components/main/SectionTitle";
+import Link from "next/link";
+import { HiArrowRight } from "react-icons/hi";
 
 export const metadata = {
-  title: "NEX SOFT LAB | Services",
+  title: "NexGen Lab | Services",
   description:
-    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+    "Custom web, app and software development services built with Next.js, React and TypeScript — high-performance, SEO-optimized and scalable.",
 };
 
-
 const projectIdeas = [
-  "Hotel & Restaurant Management App",
-  "Hospital Management App",
-  "Inventory Management App",
-  "School Management App",
-  "E-commerce",
-  "Library management",
+  "Hotel & Restaurant Management",
+  "Hospital Management System",
+  "Inventory Management",
+  "School Management",
+  "E-commerce Platform",
+  "Library Management",
 ];
 
 const ServicesPage = () => {
   return (
-    <div className=" px-4 sm:px-6 md:px-10 lg:px-20 py-12 space-y-16 min-h-screen">
-      {/* Banner Image */}
-      <div className="w-full max-w-7xl mx-auto">
-        <Image
-          src={services}
-          alt="Our Services"
-          className="w-full rounded-xl shadow-md object-cover max-h-96"
-          priority
-          sizes="(max-width: 768px) 100vw,
-                 (max-width: 1200px) 80vw,
-                 70vw"
-          style={{ width: "100%", height: "auto", borderRadius: "1rem" }}
-        />
-      </div>
-
-      {/* Header */}
-      <section className="text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 mt-6">
-          Our Services
-        </h1>
-        <p className="text-sm text-gray-700">Siam Vusa</p>
-      </section>
-
-      <ServicesCard/>
-
-      {/* Project Ideas Section */}
-      <section className="text-center px-4 max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-8">
-          Your Ideas Transforming Into Technology
-        </h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {projectIdeas.map((idea, idx) => (
-            <div
-              key={idx}
-              className="bg-white text-black p-6 rounded-xl shadow-lg text-center font-medium min-w-[150px] max-w-[250px] w-full sm:w-[45%] md:w-[30%] lg:w-[18%] mx-auto"
-            >
-              {idea}
-            </div>
-          ))}
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden grid-bg">
+        <div className="glow w-[400px] h-[400px] bg-violet-600 -top-20 left-0" />
+        <div className="glow w-[320px] h-[320px] bg-cyan-500 top-10 right-10" />
+        <div className="container relative z-10 py-20 md:py-28 text-center fade-up">
+          <span className="eyebrow justify-center mb-5">Our Services</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+            Everything you need to{" "}
+            <span className="gradient-text">ship & scale</span>
+          </h1>
+          <p className="text-[var(--color-muted)] text-lg max-w-2xl mx-auto mt-5">
+            One team, end-to-end — design, development, deployment and support.
+          </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center text-sm text-black mt-10">
-        Let us Help You With Your Project
-      </footer>
-    </div>
+      {/* Services grid */}
+      <section className="py-16">
+        <div className="container">
+          <ServicesCard />
+        </div>
+      </section>
+
+      {/* Project ideas */}
+      <section className="py-16">
+        <div className="container">
+          <SectionTitle
+            eyebrow="Use Cases"
+            text="Your ideas, transformed into technology"
+            subtitle="Some of the products we love to build. Don't see yours? We build that too."
+          />
+          <div className="flex flex-wrap justify-center gap-4">
+            {projectIdeas.map((idea, idx) => (
+              <div
+                key={idx}
+                className="glass card-lift rounded-full px-6 py-3 text-sm font-medium"
+              >
+                {idea}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16">
+        <div className="container">
+          <div className="bg-primary rounded-3xl px-8 py-14 text-center text-white relative overflow-hidden">
+            <div className="absolute inset-0 opacity-20 grid-bg" />
+            <h2 className="relative z-10 text-2xl md:text-4xl font-bold">
+              Let us help you with your project
+            </h2>
+            <Link
+              href="/contact"
+              className="relative z-10 inline-flex items-center gap-2 mt-8 bg-white text-[#14141f] font-semibold py-3 px-7 rounded-full hover:scale-105 transition-transform"
+            >
+              Start a Project <HiArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -50,15 +50,24 @@ const privacyPolicy = [
 
 const PrivacyPolicy = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
-      <p className="text-sm text-gray-500 mb-6">Effective Date: August 6, 2025</p>
-      {privacyPolicy.map((section, index) => (
-        <div key={index} className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
-          <p className="text-base text-gray-700">{section.content}</p>
-        </div>
-      ))}
+    <div className="container py-20 max-w-3xl">
+      <span className="eyebrow mb-4">Legal</span>
+      <h1 className="text-4xl font-extrabold tracking-tight mb-2 mt-3">
+        Privacy <span className="gradient-text">Policy</span>
+      </h1>
+      <p className="text-sm text-[var(--color-muted)] mb-10">
+        Effective Date: August 6, 2025
+      </p>
+      <div className="space-y-6">
+        {privacyPolicy.map((section, index) => (
+          <div key={index} className="glass rounded-2xl p-6">
+            <h2 className="text-xl font-semibold mb-2">{section.title}</h2>
+            <p className="text-[var(--color-muted)] leading-relaxed">
+              {section.content}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

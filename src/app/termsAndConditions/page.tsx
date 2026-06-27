@@ -50,27 +50,35 @@ const terms = [
 
 const TermsAndConditions = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Terms & Conditions</h1>
-      <p className="text-sm text-gray-500 mb-6">
+    <div className="container py-20 max-w-3xl">
+      <span className="eyebrow mb-4">Legal</span>
+      <h1 className="text-4xl font-extrabold tracking-tight mb-2 mt-3">
+        Terms &amp; <span className="gradient-text">Conditions</span>
+      </h1>
+      <p className="text-sm text-[var(--color-muted)] mb-10">
         Effective Date: August 6, 2025
       </p>
-      {terms.map((term, index) => (
-        <div key={index} className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">{term.title}</h2>
-          <p className="text-base text-gray-700">{term.content}</p>
+      <div className="space-y-6">
+        {terms.map((term, index) => (
+          <div key={index} className="glass rounded-2xl p-6">
+            <h2 className="text-xl font-semibold mb-2">{term.title}</h2>
+            <p className="text-[var(--color-muted)] leading-relaxed">
+              {term.content}
+            </p>
+          </div>
+        ))}
+        <div className="glass rounded-2xl p-6">
+          <h2 className="text-xl font-semibold mb-2">Contact Us</h2>
+          <p className="text-[var(--color-muted)]">
+            If you have any questions about these Terms, contact us at:
+          </p>
+          <p className="text-[var(--color-muted)] mt-2">
+            Email: support@nexsoftdev.com
+          </p>
+          <p className="text-[var(--color-muted)]">
+            Address: Dhanmondi, Dhaka, Bangladesh.
+          </p>
         </div>
-      ))}
-      <div>
-        <h1 className="text-xl font-semibold mb-2">Contact Us</h1>
-        <p className="text-base text-gray-700">
-          If you have any questions about these Terms, please contact us at:
-        </p>
-
-        <p className="text-base text-gray-700"> <span>Email:</span> support@nexsoftdev.com</p>
-        <p className="text-base text-gray-700"> <span>Address:</span>
-          Company Address: Dhanmondi, Dhaka, Bangladesh.
-        </p>
       </div>
     </div>
   );

@@ -1,114 +1,114 @@
-import Image from "next/image";
-import GoogleMap from '../../../public/images/contact/map.png'
 import { Metadata } from "next";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
+import { HiArrowRight } from "react-icons/hi";
 
 export const metadata: Metadata = {
-  title: "NEX SOFT LAB | Contact Us",
+  title: "NexGen Lab | Contact Us",
   description:
-    "Next Software Development is your trusted partner for modern web solutions using Next.js, React, TypeScript, and scalable technologies. We build high-performance, SEO-optimized, and user-friendly applications tailored to your business needs.",
+    "Get in touch with NexGen Lab to hire our team or buy a product. We're ready to help you grow your business.",
 };
+
+const info = [
+  {
+    icon: FiMapPin,
+    label: "Address",
+    value: "Rupayon Shelford, Mirpur Road, Shaymoli, Dhaka-1207, Bangladesh",
+  },
+  { icon: FiMail, label: "Email", value: "nextsoftdev1@gmail.com" },
+  { icon: FiPhone, label: "Phone", value: "+880 1XXX-XXXXXX" },
+];
+
+const socials = [FaFacebookF, FaLinkedinIn, FaInstagram];
 
 const Contact = () => {
   return (
     <>
-      <section className="bg-[url('/images/contact/contact_background.jpg')] bg-no-repeat bg-cover">
-        {/* Contact Card */}
-        <div className="bg-black/10 py-20">
-          <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Contact Form */}
-              <form className="space-y-4">
+      <section className="relative overflow-hidden grid-bg">
+        <div className="glow w-[400px] h-[400px] bg-violet-600 -top-20 left-0" />
+        <div className="glow w-[340px] h-[340px] bg-fuchsia-600 top-10 right-0" />
+
+        <div className="container relative z-10 py-20 md:py-28">
+          <div className="text-center max-w-2xl mx-auto mb-14 fade-up">
+            <span className="eyebrow justify-center mb-5">Contact</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
+              Let&apos;s build something{" "}
+              <span className="gradient-text">amazing</span>
+            </h1>
+            <p className="text-[var(--color-muted)] text-lg mt-5">
+              Have a project or want to buy a product? Drop us a message and
+              we&apos;ll get back within 24 hours.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Form */}
+            <form className="glass rounded-3xl p-8 space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
+                  className="w-full bg-transparent border border-[var(--color-border)] rounded-xl px-4 py-3 outline-none focus:border-[var(--color-brand)] transition"
                 />
                 <input
                   type="email"
-                  placeholder="Email Address*"
-                  className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
+                  placeholder="Email Address *"
+                  className="w-full bg-transparent border border-[var(--color-border)] rounded-xl px-4 py-3 outline-none focus:border-[var(--color-brand)] transition"
                 />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full border-b border-gray-400 bg-transparent outline-none py-2"
-                />
-                <textarea
-                  rows={4}
-                  placeholder="Your Message*"
-                  className="w-full border-b border-gray-400 bg-transparent outline-none py-2 resize-none"
-                />
-                <button
-                  type="submit"
-                  className="bg-teal-400 hover:bg-teal-500 text-white font-medium py-2 px-6 rounded transition"
-                >
-                  Send
-                </button>
-              </form>
+              </div>
+              <input
+                type="text"
+                placeholder="Subject"
+                className="w-full bg-transparent border border-[var(--color-border)] rounded-xl px-4 py-3 outline-none focus:border-[var(--color-brand)] transition"
+              />
+              <textarea
+                rows={5}
+                placeholder="Your Message *"
+                className="w-full bg-transparent border border-[var(--color-border)] rounded-xl px-4 py-3 outline-none focus:border-[var(--color-brand)] transition resize-none"
+              />
+              <button type="submit" className="btn-primary w-full justify-center">
+                Send Message <HiArrowRight />
+              </button>
+            </form>
 
-              {/* Contact Info */}
-              <div className="flex flex-col justify-center text-gray-800 mb-10">
-                <h2 className="text-3xl font-semibold">
-                  Any kind of information contact us.
-                </h2>
-                <p className="text-sm leading-relaxed w-80 mt-2">
-                  Rupayon Shelford (23th Floor),
-                  58/2, Mirpur Road, Shaymoli,
-                  Dhaka-1207, Bangladesh
-                </p>
+            {/* Info */}
+            <div className="space-y-4">
+              {info.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.label}
+                    className="glass card-lift rounded-2xl p-6 flex gap-4 items-start"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-primary grid place-items-center text-white text-lg shrink-0">
+                      <Icon />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{item.label}</h3>
+                      <p className="text-sm text-[var(--color-muted)] mt-1">
+                        {item.value}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
 
-                {/* Social Icons */}
-                <div className="flex space-x-4 pt-4">
-                  <a href="#" aria-label="Instagram">
-                    <i className="fab fa-instagram text-xl hover:text-teal-500"></i>
-                  </a>
-                  <a href="#" aria-label="LinkedIn">
-                    <i className="fab fa-linkedin text-xl hover:text-teal-500"></i>
-                  </a>
-                  <a href="#" aria-label="Email">
-                    <i className="fas fa-envelope text-xl hover:text-teal-500"></i>
-                  </a>
-                  <a href="#" aria-label="Facebook">
-                    <i className="fab fa-facebook text-xl hover:text-teal-500"></i>
-                  </a>
+              <div className="glass rounded-2xl p-6">
+                <h3 className="font-semibold mb-4">Follow Us</h3>
+                <div className="flex gap-3">
+                  {socials.map((Icon, i) => (
+                    <a
+                      key={i}
+                      href="#"
+                      className="grid place-items-center w-10 h-10 rounded-full border border-[var(--color-border)] hover:border-[var(--color-brand)] hover:text-[var(--color-accent)] transition"
+                    >
+                      <Icon />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      
-      {/* Map Section */}
-      <div className="my-12 flex justify-center">
-        <Image
-          height={200}
-          width={200}
-          src={GoogleMap}
-          alt="Map"
-          className="w-full max-w-xl rounded-lg shadow-md"
-        />
-      </div>
-
-
-
-
-
-       <section className="pb-20 pt-10">
-        <div className="container">
-          <div className="relative h-32 md:h-48">
-          <div className="absolute inset-0 bg-cover bg-center rounded-3xl overflow-hidden" style={{ backgroundImage: "url('/images/about/code-bg-image.png')"}} >
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/70 bg-opacity-60"></div>
-          </div>
-          <div className="relative z-10 flex items-center justify-center h-full px-4">
-            <div>
-              <h2 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold text-center">
-                We will ready to serve you
-              </h2>
-              <p className="text-white text-center mt-3">Be with Us to Wheel Up Your Revenue.</p>
-            </div>
-          </div>
-        </div>
         </div>
       </section>
     </>

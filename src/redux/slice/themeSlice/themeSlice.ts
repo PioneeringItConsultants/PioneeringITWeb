@@ -4,17 +4,13 @@ interface ThemeState {
   theme: string;
 }
 
-const themes = [
-  "light", "dark", "blue", "green", "magenta",
-  "orange", "purple", "red", "teal", "yellow"
-];
+const themes = ["dark", "light"];
 
-// Safely get initial theme from localStorage
 const getInitialTheme = (): string => {
   if (typeof window !== "undefined" && window.localStorage) {
-    return localStorage.getItem("theme") || "light";
+    return localStorage.getItem("theme") || "dark";
   }
-  return "light"; // fallback for SSR or testing
+  return "dark";
 };
 
 const initialState: ThemeState = {
@@ -26,9 +22,7 @@ const themeSlice = createSlice({
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      const currentIndex = themes.indexOf(state.theme);
-      const nextTheme = themes[(currentIndex + 1) % themes.length];
-      state.theme = nextTheme;
+      state.theme = state.theme === "light" ? "dark" : "light";
     },
     setTheme: (state, action: PayloadAction<string>) => {
       if (themes.includes(action.payload)) {
